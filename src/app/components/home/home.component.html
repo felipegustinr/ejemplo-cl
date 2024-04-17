@@ -1,1 +1,16 @@
-<p>home works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Identificador</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usr of usuarios">
+            <td>{{ usr.id }}</td>
+            <td>{{ usr.usr }}</td>
+            <td>{{ usr.edad }}</td>
+        </tr>
+    </tbody>
+</table>
