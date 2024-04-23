@@ -9,6 +9,7 @@ import { PruebaComponent } from './components/prueba/prueba.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { ProjectService } from './services/project/project.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule,HttpClient } from '@angular/common/http';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
