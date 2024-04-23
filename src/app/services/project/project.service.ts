@@ -9,7 +9,7 @@ export class ProjectService {
   constructor(protected http: HttpClient) {}
 
   getProjects(): Observable<any> {
-    let ruta = [environment.apiUrl, 'apiUrl', 'roject'].join('/');
+    let ruta = [environment.apiUrl,  'roject'].join('/');
     return this.http.get(ruta);
   }
 
@@ -28,7 +28,7 @@ export class ProjectService {
     return this.http.put(ruta, usr);
   }
 
-  deleteLogProject(id: any): Observable<any> {
+  deleteProject(id: any): Observable<any> {
     let ruta = [environment.apiUrl, 'project', id].join('/');
     return this.http.delete(ruta);
   }
