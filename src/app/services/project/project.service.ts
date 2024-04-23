@@ -14,7 +14,7 @@ export class ProjectService {
   }
 
   getProjectId(id: any): Observable<any> {
-    let ruta = [environment.apiUrl, 'apiUrl', 'project', id].join('/');
+    let ruta = [environment.apiUrl, 'project', id].join('/');
     return this.http.get(ruta);
   }
 
