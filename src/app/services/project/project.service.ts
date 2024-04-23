@@ -3,9 +3,33 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectService {
+  constructor(protected http: HttpClient) {}
 
-  constructor() { }
+  getProjects(): Observable<any> {
+    let ruta = [environment.apiUrl, 'apiUrl', 'roject'].join('/');
+    return this.http.get(ruta);
+  }
+
+  getProjectId(id: any): Observable<any> {
+    let ruta = [environment.apiUrl, 'apiUrl', 'project', id].join('/');
+    return this.http.get(ruta);
+  }
+
+  addProject(usr: any): Observable<any> {
+    let ruta = [environment.apiUrl, 'project'].join('/');
+    return this.http.post(ruta, usr);
+  }
+
+  editProject(usr: any, id: any): Observable<any> {
+    let ruta = [environment.apiUrl, 'project', id].join('/');
+    return this.http.put(ruta, usr);
+  }
+
+  deleteLogProject(id: any): Observable<any> {
+    let ruta = [environment.apiUrl, 'project', id].join('/');
+    return this.http.delete(ruta);
+  }
 }
