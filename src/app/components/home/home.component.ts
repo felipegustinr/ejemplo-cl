@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ProjectService } from '../../services/project/project.service';
 
 @Component({
   selector: 'app-home',
